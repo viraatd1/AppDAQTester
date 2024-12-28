@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+
+# App Specific Requirements
+/externals/paho.mqtt.cpp/
+/externals/packages/
+AppDAQTester.pro.user

@@ -1,0 +1,14 @@
+{
+    "server_config": {
+        "srv_broker_address": "ssl://34.102.112.102:8883",
+        "srv_client_id": "ScitonConnect",
+        "srv_topic": "358643076067979/init",
+        "srv_message": "Hello from Paho C!",
+        "srv_ca_cert_path": "/application/auth/certs/cacert.pem",
+        "srv_client_cert_path": "/application/auth/certs/cert.pem",
+        "srv_client_key_path": "/application/auth/certs/key.pem",
+        "srv_client_key_password": "",
+        "srv_username": "358643076067979",
+        "srv_password": "QR2196000701F118"
+    }
+}
