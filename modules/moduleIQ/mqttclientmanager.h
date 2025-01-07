@@ -24,18 +24,19 @@ private:
     void configureSSL(mqtt::connect_options& conn_opts);
 
     // Static configuration parameters
-    static constexpr const char* broker_address = "ssl://34.102.112.102:8883";          // Replace with your broker address
-    static constexpr const char* client_id = "ScitonConnect";                           // Unique client ID
-    static constexpr const char* topic_name = "358643076067979/init";                   // MQTT topic
-    static constexpr const char* ca_cert_path = "/home/viraat/6_IQ/AppDAQTester/certs/cacert.pem";   // CA certificate path
-    static constexpr const char* client_cert_path = "/home/viraat/6_IQ/AppDAQTester/certs/cert.pem"; // Client certificate path
-    static constexpr const char* client_key_path = "/home/viraat/6_IQ/AppDAQTester/certs/key.pem";   // Private key path
-    static constexpr const char* client_key_password = "";                              // Private key password (if needed)
-    static constexpr const char* username = "358643076067979";                          // Private key password (if needed)
-    static constexpr const char* password = "QR2196000701F118";                         // Private key password (if needed)
+    std::string  m_brokerAddress = "ssl://34.102.112.102:8883";          // Replace with your broker address
+    std::string  m_clientId = "ScitonConnect";                           // Unique client ID
+    std::string  m_topicName = "358643076067979/init";                   // MQTT topic
+    std::string  m_clientKeyPassword = "";                              // Private key password (if needed)
+    std::string  m_username = "358643076067979";                          // Private key password (if needed)
+    std::string  m_password = "QR2196000701F118";                         // Private key password (if needed)
 
-    mqtt::async_client client;
-    const std::string topic;
+    std::string m_caCertPath = "/home/viraat/application/cacert.pem";   // CA certificate path
+    std::string m_clientCertPath = "/home/viraat/application/cert.pem"; // Client certificate path
+    std::string m_clientKeyPath = "/home/viraat/application/key.pem";   // Private key path
+
+    mqtt::async_client m_asyncClient;
+    const std::string m_topic;
 };
 
 #endif // MQTTCLIENTMANAGER_H

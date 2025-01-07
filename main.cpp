@@ -38,11 +38,12 @@ int main(int argc, char *argv[])
     MqttClientManager::initialize();
 
     // Send a message
-    MqttClientManager::sendMessage("Hello from Paho C!");
+    MqttClientManager::sendMessage("Xmas!");
 
 
 
-
+    // Send a message
+    MqttClientManager::sendMessage("CPP!");
 
 
 
